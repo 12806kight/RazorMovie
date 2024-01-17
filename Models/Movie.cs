@@ -10,7 +10,8 @@ namespace RazorPagesMovie.Models
         [StringLength(60, MinimumLength = 3)]
         [Required]
         public string? Title { get; set; }
-        
+
+        [Required]
         [Display(Name = "Release Date")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
@@ -18,9 +19,10 @@ namespace RazorPagesMovie.Models
         [Required]
         [StringLength(30)]
         public string? Genre { get; set; }
-        
+        [Required]
         [Column(TypeName = "decimal(18, 2)")]
         public decimal Price { get; set; }
+        [Required]
         public string Rating { get; set; } = string.Empty;
     }
 }
